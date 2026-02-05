@@ -1,0 +1,177 @@
+/* ============================
+   QUIZ PAGE LAYOUT
+============================ */
+
+.quiz-page {
+  min-height: 100vh;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.04),
+    #000 60%
+  );
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+/* ============================
+   QUIZ CONTAINER
+============================ */
+
+.quiz-card {
+  width: 100%;
+  max-width: 720px;
+  padding: 3.5rem 3rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(229, 231, 235, 0.12);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 40px 120px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* ============================
+   QUIZ HEADER
+============================ */
+
+.quiz-progress {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 1.8rem;
+}
+
+.quiz-question {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  margin-bottom: 2.8rem;
+}
+
+/* ============================
+   ANSWERS
+============================ */
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.quiz-option {
+  padding: 1rem 1.4rem;
+  background: transparent;
+  border: 1px solid rgba(229, 231, 235, 0.3);
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.25s ease,
+    border-color 0.3s ease;
+}
+
+.quiz-option:hover {
+  background: rgb(38, 138, 232);;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.quiz-option:active {
+  transform: translateY(0);
+}
+
+/* ============================
+   RESULT SCREEN
+============================ */
+
+.quiz-result {
+  text-align: center;
+}
+
+.quiz-result h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: rgb(38, 138, 232);
+}
+
+.quiz-score {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin: 1.5rem 0;
+}
+
+.quiz-message {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  letter-spacing: 0.12em;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+/* ============================
+   BUTTONS (MATCH HOME / NAV)
+============================ */
+
+.quiz-button {
+  display: inline-block;
+  padding: 0.7rem 2.2rem;
+  border: 1px solid #e5e7eb;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quiz-button:hover {
+  background: #e5e7eb;
+  color: #000;
+}
+
+/* ============================
+   STORED RESULT MESSAGE
+============================ */
+
+.quiz-stored {
+  text-align: center;
+}
+
+.quiz-stored p {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+  margin-bottom: 2.2rem;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 700px) {
+  .quiz-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .quiz-question {
+    font-size: 1.3rem;
+  }
+
+  .quiz-score {
+    font-size: 2.4rem;
+  }
+}

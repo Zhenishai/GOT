@@ -1,0 +1,23 @@
+.audio-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(229, 231, 235, 0.6);
+  color: #e5e7eb;
+
+  font-size: 1.1rem;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.audio-toggle:hover {
+  background: #e5e7eb;
+  color: #000;
+}

@@ -1,0 +1,114 @@
+/* ============================
+   AUTH PAGE LAYOUT
+============================ */
+
+.auth-page {
+  min-height: 100vh;
+  width: 100vw;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(40, 40, 40, 0.6),
+    #000 70%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  font-family: "PPNeueMontreal", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+/* ============================
+   TITLE
+============================ */
+
+.auth-page h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* ============================
+   INPUTS
+============================ */
+
+.auth-page input {
+  width: 320px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: transparent;
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.auth-page input::placeholder {
+  color: rgba(229, 231, 235, 0.5);
+  letter-spacing: 0.15em;
+}
+
+.auth-page input:focus {
+  border-color: #e5e7eb;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================
+   MAIN BUTTON
+============================ */
+
+.auth-page button {
+  width: 320px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #e5e7eb;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.auth-page button:hover {
+  background: #e5e7eb;
+  color: #000;
+}
+
+/* ============================
+   TOGGLE TEXT
+============================ */
+
+.auth-page p {
+  margin-top: 1.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(229, 231, 235, 0.7);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.auth-page p:hover {
+  color: #e5e7eb;
+}
+/* ============================
+   MOBILE
+============================ */
+
+@media (max-width: 480px) {
+  .auth-page input,
+  .auth-page button {
+    width: 260px;
+  }
+
+  .auth-page h2 {
+    font-size: 1.1rem;
+  }
+}

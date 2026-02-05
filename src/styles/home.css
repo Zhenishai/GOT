@@ -1,0 +1,234 @@
+/* ============================
+   HOME PAGE LAYOUT
+============================ */
+
+.home {
+
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 6rem;
+  background: #000;
+  color: #e5e7eb;
+  overflow: hidden;
+}
+
+/* LEFT CONTENT */
+
+.home-left {
+  max-width: 500px;
+  margin-top: -40px;
+}
+
+.home-left h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.04em;
+  color: rgb(38, 138, 232);
+}
+
+.home-left p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 2.5rem;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border: 1px solid #e5e7eb;
+  color: rgb(38, 138, 232);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.home-button:hover {
+  background: #e5e7eb;
+  color: #000;
+}
+
+/* RIGHT SIDE */
+
+.home-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============================
+   STACKED CAROUSEL
+============================ */
+
+.carousel-stacked {
+  position: relative;
+  width: 560px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BASE IMAGE */
+
+.carousel-img {
+  position: absolute;
+  width: 440px;
+  height: 300px;
+  object-fit: cover;
+  transition:
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.6s ease,
+    filter 0.6s ease;
+  cursor: pointer;
+  filter: brightness(0.7);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* CENTER IMAGE */
+
+.carousel-img.center {
+  transform: translateX(0) scale(1.15);
+  z-index: 3;
+  opacity: 1;
+  filter: brightness(1);
+  cursor: default;
+}
+
+/* LEFT IMAGE */
+
+.carousel-img.left {
+  transform: translateX(-180px) scale(0.9);
+  z-index: 1;
+  opacity: 0.55;
+}
+
+/* RIGHT IMAGE */
+
+.carousel-img.right {
+  transform: translateX(180px) scale(0.9);
+  z-index: 1;
+  opacity: 0.55;
+}
+
+/* Hover hint */
+
+.carousel-img.left:hover,
+.carousel-img.right:hover {
+  opacity: 0.8;
+}
+
+/* ============================
+   CONTROLS
+============================ */
+
+.carousel-controls {
+  position: absolute;
+  bottom: -2.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.carousel-controls button {
+  background: none;
+  border: 1px solid #e5e7eb;
+  color: #e5e7eb;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.3rem 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background: #e5e7eb;
+  color: #000;
+}
+
+/* ============================
+   CAROUSEL BUTTON
+============================ */
+
+.carousel-button {
+  position: absolute;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.7rem 1.8rem;
+  border: 1px solid #e5e7eb;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+  background: #e5e7eb;
+  color: #000;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 1000px) {
+  .home {
+    grid-template-columns: 1fr;
+    padding: 4rem 2rem;
+    gap: 4rem;
+  }
+
+  .home-left {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .home-right {
+    margin-top: 2rem;
+  }
+
+  .carousel-stacked {
+    width: 100%;
+    max-width: 420px;
+  }
+
+ .carousel-img {
+  transition:
+    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1.5s ease,
+    filter 1.5s ease;
+}
+
+  .carousel-img.left {
+    transform: translateX(-120px) scale(0.85);
+  }
+
+  .carousel-img.right {
+    transform: translateX(120px) scale(0.85);
+  }
+}
+/* ============================
+   USER GREETING
+============================ */
+
+.welcome-wrapper {
+  position: absolute;
+  top: 90px;
+  left: 3rem;
+  z-index: 5;
+}
+
+.welcome {
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(229, 231, 235, 0.8);
+}
